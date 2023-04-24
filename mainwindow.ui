@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>709</width>
+                <height>563</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>在线福利的最大化算法演示</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,3">
+                <item>
+                    <widget class="QFrame" name="frame">
+                        <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout" stretch="3,1">
+                            <item>
+                                <widget class="QFrame" name="buttonCollections">
+                                    <property name="frameShape">
+                                        <enum>QFrame::StyledPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>QFrame::Raised</enum>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_2">
+                                        <item>
+                                            <widget class="QLineEdit" name="dataTextEdit"/>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="inputDataButton">
+                                                <property name="text">
+                                                    <string>输入数据</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QSpinBox" name="biddersTextEdit"/>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="inputBiddersButton">
+                                                <property name="text">
+                                                    <string>输入买家个数</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QLineEdit" name="functionTextEdit"/>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="functionButton">
+                                                <property name="text">
+                                                    <string>输入买家边际函数</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="autoDemoButton">
+                                                <property name="text">
+                                                    <string>自动演示</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="nextStepButton">
+                                                <property name="text">
+                                                    <string>下一步</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="clearButton">
+                                                <property name="text">
+                                                    <string>清空数据</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QFrame" name="frame_4">
+                                    <property name="frameShape">
+                                        <enum>QFrame::StyledPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>QFrame::Raised</enum>
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QFrame" name="frame_2">
+                        <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="20,1">
+                            <item>
+                                <widget class="QFrame" name="itemsList">
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>22</pointsize>
+                                            <bold>true</bold>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>QFrame::StyledPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>QFrame::Raised</enum>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QLabel" name="infLabel">
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>13</pointsize>
+                                            <bold>true</bold>
+                                        </font>
+                                    </property>
+                                    <property name="text">
+                                        <string>TextLabel</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>Qt::AlignCenter</set>
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QStatusBar" name="statusbar"/>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>
