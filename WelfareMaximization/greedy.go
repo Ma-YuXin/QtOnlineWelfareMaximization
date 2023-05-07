@@ -11,13 +11,20 @@ type Greedy struct {
 	itemNum   int64
 	bidders   []Bidder
 }
-func (g*Greedy)init(f sort.IntSlice){
-	for i:=0;i<len(g.bidders);i++{
+
+func (g *Greedy) init(f sort.IntSlice) {
+	for i := 0; i < len(g.bidders); i++ {
 		g.bidders[i].init(f[i])
 	}
 }
 func (g *Greedy) getBidder(pos int) *Bidder {
 	return &(g.bidders[pos])
+}
+func (g*Greedy)PopBack(pos int){
+g.bidders[pos].Pop()
+}
+func (g *Greedy) Alloc(pos int, v float64) {
+	g.bidders[pos].Update(v)
 }
 func (g *Greedy) fit(v float64) int64 {
 	// fmt.Println("flalajl")
@@ -37,10 +44,13 @@ func (g *Greedy) fit(v float64) int64 {
 		}
 	}
 	g.bidders[pos].Update(v)
-	g.total+=margin[pos]
+	g.total += margin[pos]
 	fmt.Println(margin)
 	return int64(pos)
 }
-func (g *Greedy) getTotal()float64{
-	return g.total
+func (g *Greedy) getTotal() (sum float64) {
+	for i := 0; i < int(g.bidderNum); i++ {
+		sum += g.bidders[i].Calculate()
+	}
+	return
 }

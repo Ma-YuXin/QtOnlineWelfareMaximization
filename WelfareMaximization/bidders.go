@@ -23,6 +23,10 @@ func (b *Bidder) Update(v float64) {
 	b.totalValue = b.Calculate()
 
 }
+func(b*Bidder)Pop(){
+	b.allocate=b.allocate[0:len(b.allocate)-1]
+	b.totalValue=b.Calculate()
+}
 func (b *Bidder) Calculate() float64 {
 	if b.allocate == nil {
 		return -1
